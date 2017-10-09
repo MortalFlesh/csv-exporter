@@ -4,9 +4,13 @@ CSV Exporter
 [![Build Status](https://travis-ci.org/MortalFlesh/csv-exporter.svg?branch=master)](https://travis-ci.org/MortalFlesh/csv-exporter)
 [![Coverage Status](https://coveralls.io/repos/github/MortalFlesh/csv-exporter/badge.svg?branch=master)](https://coveralls.io/github/MortalFlesh/csv-exporter?branch=master)
 
-Sdk for ImageApi
+Csv exporter for [Symfony](https://github.com/symfony/symfony)
 
 ## Installation
+```bash
+$ composer require mf/csv-exporter
+```
+or
 ```json
 {
     "mf/csv-exporter": "^1.0"
