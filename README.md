@@ -1,6 +1,9 @@
 CSV Exporter
 ============
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/mf/csv-exporter.svg)](https://packagist.org/packages/mf/csv-exporter)
+[![Total Downloads](https://img.shields.io/packagist/dt/mf/csv-exporter.svg)](https://packagist.org/packages/mf/csv-exporter)
+[![License](https://img.shields.io/packagist/l/mf/csv-exporter.svg)](https://packagist.org/packages/mf/csv-exporter)
 [![Build Status](https://travis-ci.org/MortalFlesh/csv-exporter.svg?branch=master)](https://travis-ci.org/MortalFlesh/csv-exporter)
 [![Coverage Status](https://coveralls.io/repos/github/MortalFlesh/csv-exporter/badge.svg?branch=master)](https://coveralls.io/github/MortalFlesh/csv-exporter?branch=master)
 
