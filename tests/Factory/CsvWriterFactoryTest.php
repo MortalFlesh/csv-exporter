@@ -1,14 +1,13 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace MF\CSVExporter\Tests\Factory;
+namespace MF\CSVExporter\Factory;
 
 use League\Csv;
-use MF\CSVExporter\Factory\CsvWriterFactory;
-use MF\CSVExporter\Tests\AbstractTestCase;
+use MF\CSVExporter\AbstractTestCase;
 
 class CsvWriterFactoryTest extends AbstractTestCase
 {
-    public function testShouldGetCsvWriter()
+    public function testShouldGetCsvWriter(): void
     {
         $csvWriterFactory = new CsvWriterFactory();
 

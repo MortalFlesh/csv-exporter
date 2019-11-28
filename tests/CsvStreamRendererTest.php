@@ -1,8 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace MF\CSVExporter\Tests;
+namespace MF\CSVExporter;
 
-use MF\CSVExporter\CsvStreamRenderer;
 use MF\CSVExporter\Factory\CsvWriterFactory;
 
 class CsvStreamRendererTest extends AbstractTestCase
@@ -13,13 +12,13 @@ class CsvStreamRendererTest extends AbstractTestCase
     /** @var CsvWriterFactory */
     private $csvWriterFactory;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->csvWriterFactory = new CsvWriterFactory();
         $this->csvStreamRenderer = new CsvStreamRenderer($this->csvWriterFactory);
     }
 
-    public function testShouldPrintCsvData()
+    public function testShouldPrintCsvData(): void
     {
         $data = [
             [666, 'Jon Snow', 'jon.snow@gmail.com'],
