@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace MF\CSVExporter\Factory;
 
@@ -21,7 +21,7 @@ class StreamedResponseFactory
         callable $findBulk,
         callable $formatRowData
     ): StreamedResponse {
-        $response = new StreamedResponse(function () use ($heading, $findBulk, $formatRowData) {
+        $response = new StreamedResponse(function () use ($heading, $findBulk, $formatRowData): void {
             $this->dataStreamGenerator->generateCsv($heading, $findBulk, $formatRowData);
         });
 

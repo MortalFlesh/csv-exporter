@@ -1,9 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace MF\CSVExporter\Tests;
+namespace MF\CSVExporter;
 
-use MF\CSVExporter\CsvStreamRenderer;
-use MF\CSVExporter\DataStreamGenerator;
 use Mockery as m;
 
 class DataStreamGeneratorTest extends AbstractTestCase
@@ -14,13 +12,13 @@ class DataStreamGeneratorTest extends AbstractTestCase
     /** @var CsvStreamRenderer|m\MockInterface */
     private $csvStreamRenderer;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->csvStreamRenderer = m::spy(CsvStreamRenderer::class);
         $this->dataStreamGenerator = new DataStreamGenerator($this->csvStreamRenderer);
     }
 
-    public function testShouldGenerateCsvResponse()
+    public function testShouldGenerateCsvResponse(): void
     {
         $heading = ['winter', 'is', 'coming'];
         $firstBulk = [
@@ -33,7 +31,7 @@ class DataStreamGeneratorTest extends AbstractTestCase
         ];
         $bulks = [$firstBulk, $secondBulk];
         $findBulk = function ($offset, $bulkSize) use ($bulks) {
-            return isset($bulks[$offset]) ? $bulks[$offset] : [];
+            return $bulks[$offset] ?? [];
         };
         $formatRowData = function (array $row) {
             return $row;

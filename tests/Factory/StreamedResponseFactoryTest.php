@@ -1,10 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace MF\CSVExporter\Tests\Factory;
+namespace MF\CSVExporter\Factory;
 
+use MF\CSVExporter\AbstractTestCase;
 use MF\CSVExporter\DataStreamGenerator;
-use MF\CSVExporter\Factory\StreamedResponseFactory;
-use MF\CSVExporter\Tests\AbstractTestCase;
 use Mockery as m;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
@@ -16,19 +15,19 @@ class StreamedResponseFactoryTest extends AbstractTestCase
     /** @var DataStreamGenerator|m\Mock */
     private $dataStreamGenerator;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->dataStreamGenerator = m::spy(DataStreamGenerator::class);
         $this->streamedResponseFactory = new StreamedResponseFactory($this->dataStreamGenerator);
     }
 
-    public function testShouldGetStreamedResponse()
+    public function testShouldGetStreamedResponse(): void
     {
         $filename = 'jon.snow';
         $heading = ['winter', 'is', 'coming'];
-        $findBulk = function () {
+        $findBulk = function (): void {
         };
-        $formatRowData = function () {
+        $formatRowData = function (): void {
         };
 
         $response = $this->streamedResponseFactory->createCsv($filename, $heading, $findBulk, $formatRowData);
