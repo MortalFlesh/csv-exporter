@@ -7,11 +7,8 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class StreamedResponseFactory
 {
-    private DataStreamGenerator $dataStreamGenerator;
-
-    public function __construct(DataStreamGenerator $dataStreamGenerator)
+    public function __construct(private DataStreamGenerator $dataStreamGenerator)
     {
-        $this->dataStreamGenerator = $dataStreamGenerator;
     }
 
     public function createCsv(

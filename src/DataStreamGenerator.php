@@ -6,17 +6,13 @@ class DataStreamGenerator
 {
     public const DEFAULT_BULK_SIZE = 1000;
 
-    private CsvStreamRenderer $csvStreamRenderer;
-
     /** @var callable */
     private $formatRowData;
-
     /** @var callable */
     private $findData;
 
-    public function __construct(CsvStreamRenderer $csvStreamRenderer)
+    public function __construct(private CsvStreamRenderer $csvStreamRenderer)
     {
-        $this->csvStreamRenderer = $csvStreamRenderer;
     }
 
     public function generateCsv(
