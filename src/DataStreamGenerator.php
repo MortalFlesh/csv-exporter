@@ -4,10 +4,9 @@ namespace MF\CSVExporter;
 
 class DataStreamGenerator
 {
-    const DEFAULT_BULK_SIZE = 1000;
+    public const DEFAULT_BULK_SIZE = 1000;
 
-    /** @var CsvStreamRenderer */
-    private $csvStreamRenderer;
+    private CsvStreamRenderer $csvStreamRenderer;
 
     /** @var callable */
     private $formatRowData;

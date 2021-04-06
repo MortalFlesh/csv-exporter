@@ -2,6 +2,8 @@
 
 <!-- There is always Unreleased section on the top. Subsections (Added, Changed, Fixed, Removed) should be added as needed. -->
 ## Unreleased
+- [**BC**] Require php 7.4 and update dependencies
+- [**BC**] Drop Symfony 4 support
 
 ## 1.1.0 - 2019-11-28
 - Update dependencies
