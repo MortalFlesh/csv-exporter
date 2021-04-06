@@ -19,7 +19,7 @@
         }
     },
     "require": {
-        "php": "^7.4",
+        "php": "^8.0",
         "league/csv": "^5.0",
         "symfony/http-foundation": "^5.0"
     },

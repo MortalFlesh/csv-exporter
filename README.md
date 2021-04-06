@@ -13,15 +13,9 @@ Csv exporter for [Symfony](https://github.com/symfony/symfony)
 ```bash
 $ composer require mf/csv-exporter
 ```
-or
-```json
-{
-    "mf/csv-exporter": "^1.0"
-}
-```
 
 ## Requirements
-- `PHP 7.4`
+- `PHP 8.0`
 - [league/csv](https://github.com/thephpleague/csv)
 
 ## Usage
