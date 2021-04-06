@@ -6,11 +6,8 @@ use MF\CSVExporter\Factory\CsvWriterFactory;
 
 class CsvStreamRendererTest extends AbstractTestCase
 {
-    /** @var CsvStreamRenderer */
-    private $csvStreamRenderer;
-
-    /** @var CsvWriterFactory */
-    private $csvWriterFactory;
+    private CsvStreamRenderer $csvStreamRenderer;
+    private CsvWriterFactory $csvWriterFactory;
 
     protected function setUp(): void
     {

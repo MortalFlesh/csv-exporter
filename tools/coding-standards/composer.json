@@ -1,7 +1,7 @@
 {
     "name": "tools/coding-standards",
     "require-dev": {
-        "lmc/coding-standard": "^1.0"
+        "lmc/coding-standard": "^3.0"
     },
     "authors": [
         {
@@ -14,7 +14,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.1.1"
+            "php": "7.4.16"
         },
         "sort-packages": true
     }

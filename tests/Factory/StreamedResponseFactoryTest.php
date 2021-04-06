@@ -9,10 +9,9 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class StreamedResponseFactoryTest extends AbstractTestCase
 {
-    /** @var StreamedResponseFactory */
-    private $streamedResponseFactory;
+    private StreamedResponseFactory $streamedResponseFactory;
 
-    /** @var DataStreamGenerator|m\Mock */
+    /** @var DataStreamGenerator|m\MockInterface */
     private $dataStreamGenerator;
 
     protected function setUp(): void

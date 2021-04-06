@@ -7,8 +7,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class StreamedResponseFactory
 {
-    /** @var DataStreamGenerator */
-    private $dataStreamGenerator;
+    private DataStreamGenerator $dataStreamGenerator;
 
     public function __construct(DataStreamGenerator $dataStreamGenerator)
     {

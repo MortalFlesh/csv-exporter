@@ -6,11 +6,10 @@ use Mockery as m;
 
 class DataStreamGeneratorTest extends AbstractTestCase
 {
-    /** @var DataStreamGenerator */
-    private $dataStreamGenerator;
+    private DataStreamGenerator $dataStreamGenerator;
 
     /** @var CsvStreamRenderer|m\MockInterface */
-    private $csvStreamRenderer;
+    private CsvStreamRenderer $csvStreamRenderer;
 
     protected function setUp(): void
     {

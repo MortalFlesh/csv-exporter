@@ -6,8 +6,7 @@ use MF\CSVExporter\Factory\CsvWriterFactory;
 
 class CsvStreamRenderer
 {
-    /** @var CsvWriterFactory */
-    private $csvWriterFactory;
+    private CsvWriterFactory $csvWriterFactory;
 
     public function __construct(CsvWriterFactory $csvWriterFactory)
     {
