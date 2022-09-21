@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class StreamedResponseFactory
 {
-    public function __construct(private DataStreamGenerator $dataStreamGenerator)
+    public function __construct(private readonly DataStreamGenerator $dataStreamGenerator)
     {
     }
 
@@ -15,7 +15,7 @@ class StreamedResponseFactory
         string $filename,
         array $heading,
         callable $findBulk,
-        callable $formatRowData
+        callable $formatRowData,
     ): StreamedResponse {
         $response = new StreamedResponse(function () use ($heading, $findBulk, $formatRowData): void {
             $this->dataStreamGenerator->generateCsv($heading, $findBulk, $formatRowData);
