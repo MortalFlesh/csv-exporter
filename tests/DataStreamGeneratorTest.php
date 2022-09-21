@@ -32,9 +32,7 @@ class DataStreamGeneratorTest extends AbstractTestCase
         $findBulk = function ($offset, $bulkSize) use ($bulks) {
             return $bulks[$offset] ?? [];
         };
-        $formatRowData = function (array $row) {
-            return $row;
-        };
+        $formatRowData = fn (array $row) => $row;
 
         $this->dataStreamGenerator->generateCsv($heading, $findBulk, $formatRowData, 1);
 

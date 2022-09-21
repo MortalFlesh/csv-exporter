@@ -11,7 +11,7 @@ class DataStreamGenerator
     /** @var callable */
     private $findData;
 
-    public function __construct(private CsvStreamRenderer $csvStreamRenderer)
+    public function __construct(private readonly CsvStreamRenderer $csvStreamRenderer)
     {
     }
 
@@ -19,7 +19,7 @@ class DataStreamGenerator
         array $heading,
         callable $findData,
         callable $formatRowData,
-        int $bulkSize = self::DEFAULT_BULK_SIZE
+        int $bulkSize = self::DEFAULT_BULK_SIZE,
     ): void {
         $this->formatRowData = $formatRowData;
         $this->findData = $findData;

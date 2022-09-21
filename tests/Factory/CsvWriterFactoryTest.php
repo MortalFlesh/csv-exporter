@@ -14,6 +14,5 @@ class CsvWriterFactoryTest extends AbstractTestCase
         $csvWriter = $csvWriterFactory->create();
 
         $this->assertInstanceOf(Csv\Writer::class, $csvWriter);
-        $this->assertSame('UTF-8', $csvWriter->getEncoding());
     }
 }
